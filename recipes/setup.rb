@@ -1,3 +1,5 @@
+package 'nano'
+package 'vim-enhanced'
 package 'tree' do
 	action :install 
 end
