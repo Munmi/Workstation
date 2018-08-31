@@ -10,7 +10,12 @@ package 'ntp' do
 end
 
 file '/etc/motd' do
- content 'this file is the property of munmi'
+ content "this file is the property of munmi
+	Hostname = #{node['hostname']}
+	ipAddress = #{node['ipaddress']}
+	memory = #{node['memory']['total']}
+	cpu = #{node['cpu']['0']['mhz']}"
+
  owner 'root'
  group 'root'
  mode '777'
